@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="ReplacerPro.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReplacerPro"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+>
+    <Pivot Title="Replacer Pro v1.0.0 Alpha">
+        <PivotItem Header="替换规则">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="65"></RowDefinition>
+                    <RowDefinition Height="210"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                    Margin="5"
+                >
+                    <Span>在这里填写您的<Bold Foreground="AliceBlue">替换规则</Bold>。</Span>
+                    <LineBreak/>
+                    <Span>每行填写一个规则，用 <Italic>-></Italic>
+                        来分隔键<Italic Foreground="Gray">(Key)</Italic>
+                        与值<Italic Foreground="Gray">(Value)</Italic>。
+                    </Span>
+                    <LineBreak/>
+                    <Span>特别的，如果键<Italic Foreground="Gray">(Key)</Italic>
+                        与值<Italic Foreground="Gray">(Value)</Italic>
+                        包含了换行，则请以 <Italic Foreground="Red">!</Italic> 开头，
+                        然后在内容中将所有的换行以 <Italic Foreground="Red">@</Italic> 替代。
+                    </Span>
+                </TextBlock>
+                <RichEditBox Grid.Row="1"
+                    x:Name="ReplaceRuleEditBox"
+                    Width="600" Height="200"
+                    HorizontalAlignment="Left" Margin="5"
+                    PlaceholderText="在这里输入替换规则 每行一个"
+                    Loaded="Event_ReplaceRuleEditBox_Loaded"
+                    Unloaded="Event_ReplaceRuleEditBox_Unloaded"
+                    TextChanged="Event_TbxTextChanged"
+                />
+                <Button Grid.Row="2"
+                    Margin="5"
+                    Content="将剪贴板的内容覆盖到输入框"
+                    Click="Event_ReplaceRuleEditBox_FillWithClipboard"
+                />
+            </Grid>
+        </PivotItem>
+        <PivotItem Header="待替换文本">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="210"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                    Margin="5"
+                >
+                    <Span>在这里填写您的<Bold Foreground="Gray">待替换文本</Bold>。</Span>
+                </TextBlock>
+                <RichEditBox Grid.Row="1"
+                    x:Name="TargetTextEditBox"
+                    Width="600" Height="200"
+                    HorizontalAlignment="Left" Margin="5"
+                    PlaceholderText="在这里输入待替换文本"
+                    Loaded="Event_TargetTextEditBox_Loaded"
+                    Unloaded="Event_TargetTextEditBox_Unloaded"
+                    TextChanged="Event_TbxTextChanged"
+                />
+                <Button Grid.Row="2"
+                    Margin="5"
+                    Content="将剪贴板的内容覆盖到输入框"
+                    Click="Event_TargetTextEditBox_FillWithClipboard"
+                />
+            </Grid>
+        </PivotItem>
+        <PivotItem Header="替换后文本">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="210"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                    Margin="5"
+                >
+                    <Span>这里是<Bold Foreground="MediumVioletRed">处理后的文本</Bold>。</Span>
+                </TextBlock>
+                <RichEditBox Grid.Row="1"
+                    x:Name="ModifiedTextEditBox"
+                    Width="600" Height="200"
+                    HorizontalAlignment="Left" Margin="5"
+                    PlaceholderText="暂无"
+                    IsReadOnly="True"
+                />
+                <Button Grid.Row="2"
+                    Margin="5"
+                    Content="复制"
+                    Click="Event_ModifiedTextEditBox_CopyToClipboard"
+                />
+            </Grid>
+        </PivotItem>
+        <PivotItem Header="设置">
+            <TextBlock Text="urgent emails go here." />
+        </PivotItem>
+    </Pivot>
+</Window>
