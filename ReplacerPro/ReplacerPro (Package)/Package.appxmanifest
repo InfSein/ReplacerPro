@@ -9,7 +9,7 @@
 
   <Identity
     Name="31a43d44-69a4-4d2c-a240-6bf25f61bb8f"
-    Publisher="CN=EDY"
+    Publisher="CN=InfSein"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="31a43d44-69a4-4d2c-a240-6bf25f61bb8f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
