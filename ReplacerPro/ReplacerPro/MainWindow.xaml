@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
 >
-    <Pivot Title="Replacer Pro v1.0.0 Alpha">
+    <Pivot Title="Replacer Pro v1.0.0 Alpha" Loaded="Event_MainWindowLoad">
         <PivotItem Header="替换规则">
             <Grid>
                 <Grid.RowDefinitions>
@@ -20,7 +20,7 @@
                 <TextBlock Grid.Row="0"
                     Margin="5"
                 >
-                    <Span>在这里填写您的<Bold Foreground="AliceBlue">替换规则</Bold>。</Span>
+                    <Span>在这里填写您的<Bold Foreground="Blue">替换规则</Bold>。</Span>
                     <LineBreak/>
                     <Span>每行填写一个规则，用 <Italic>-></Italic>
                         来分隔键<Italic Foreground="Gray">(Key)</Italic>
@@ -106,7 +106,89 @@
             </Grid>
         </PivotItem>
         <PivotItem Header="设置">
-            <TextBlock Text="urgent emails go here." />
+            <!--<Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    --><!--<RowDefinition Height="60"></RowDefinition>--><!--
+                </Grid.RowDefinitions>
+                --><!-- 部件选择模块 --><!--
+                <NumberBox Header="主手" Grid.Row="0" Grid.Column="0"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="副手" Grid.Row="0" Grid.Column="2"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="头部" Grid.Row="1" Grid.Column="0"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="耳坠" Grid.Row="1" Grid.Column="2"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="身体" Grid.Row="2" Grid.Column="0"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="项链" Grid.Row="2" Grid.Column="2"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="手部" Grid.Row="3" Grid.Column="0"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="手镯" Grid.Row="3" Grid.Column="2"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="腿部" Grid.Row="4" Grid.Column="0"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="戒指" Grid.Row="4" Grid.Column="2"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+                <NumberBox Header="脚部" Grid.Row="5" Grid.Column="0"
+                    Value="0"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="1"
+                    LargeChange="10"
+                />
+            </Grid>-->
         </PivotItem>
     </Pivot>
 </Window>
